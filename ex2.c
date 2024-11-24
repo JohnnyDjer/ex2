@@ -6,16 +6,16 @@ Assignment: ex2
 
 #include <stdio.h>
 
+
 int main() {
-	    int option;
+    int option;
     int numFromUser, smileNumber, cheerNumber, maxNumber;
     int   isPrime = 0;
-    int digitCount, sumLeft, sumRight, sumDivisors, reversed;
-    int   i, j, spacesBeforeNose, spacesBetweenEyes;
+    int    i, j;
 
     while (1) {
 
-        // Display menu6
+        // Display menu
         printf("Choose an option:\n");
         printf("\t1. Happy Face\n");
         printf("\t2. Balanced Number\n");
@@ -59,8 +59,8 @@ int main() {
                 }
 
                 // Calculate number of spaces
-                spacesBetweenEyes = size - 2;
-                spacesBeforeNose = size / 2;
+                int spacesBetweenEyes = size - 2;
+                int spacesBeforeNose = size / 2;
 
                 // Print face structure
                 // 1. Print top row (eyes)
@@ -92,6 +92,8 @@ int main() {
                 continue;
 
 
+
+
 	// Case 2: determine whether the sum of all digits to the left of the middle digit(s)
 	// and the sum of all digits to the right of the middle digit(s) are equal
 	/* Examples:
@@ -104,7 +106,7 @@ int main() {
                     while(1) {
                         printf("Enter a number:\n");
                         scanf("%d", &numFromUser);
-                        if(numFromUser <= 0) {
+                        if(numFromUser <= 0 ) {
                             printf("Only positive number is allowed, please try again:\n");
                         } else {
                             break;  // Valid number entered, exit loop
@@ -151,14 +153,13 @@ int main() {
 
                     continue;
                 }
-
 	// Case 3: determine whether the sum of the proper divisors (od an integer) is greater than the number itself
 	/* Examples:
 	Abudant: 12, 20, 24
 	Not Abudant: 3, 7, 10
 	Please notice: the number has to be bigger than 0.
 	*/
-	    case 3: {
+	   case 3: {
                     // Get number and check if generous (abundant)
                     while(3){
                     printf("Enter a number:\n");
@@ -169,7 +170,7 @@ int main() {
                             break;
                         }}
 
-                    sumDivisors = 0;
+                    int sumDivisors = 0;
                     for (i = 1; i <= numFromUser / 2; i++) {
                         if (numFromUser % i == 0) {
                             sumDivisors += i;
@@ -211,7 +212,7 @@ int main() {
                     }
 
                     // Reverse the number
-                    reversed = 0;
+                    int reversed = 0;
                     int temp = numFromUser;
                     while (temp > 0) {
                         reversed = reversed * 10 + temp % 10;
@@ -292,7 +293,7 @@ int main() {
 	/* Example:
 	6, smile: 2, cheer: 3 : 1, Smile!, Cheer!, Smile!, 5, Festival!
 	*/
-		       case 6:{
+		        case 6:{
 
 
                     // Get smile number, cheer number, and max number for festival
