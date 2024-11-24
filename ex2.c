@@ -11,7 +11,7 @@ int main() {
     int numFromUser, smileNumber, cheerNumber, maxNumber;
     int   isPrime = 0;
     int digitCount, sumLeft, sumRight, sumDivisors, reversed;
-    int   nextNum, i, j, digit, middle, spacesBeforeNose, spacesBetweenEyes;
+    int   i, j, spacesBeforeNose, spacesBetweenEyes;
 
     while (1) {
 
@@ -342,6 +342,6 @@ while(6) {
                 return 0;
             }
         }
-	return 0;
+	
 }
 }
