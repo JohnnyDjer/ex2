@@ -314,7 +314,7 @@ while(6) {
                     while(6) {
                         printf("Enter maximum number for the festival:\n");
                         if(scanf("%d", &maxNumber)!= 1 || maxNumber<=0 || maxNumber<=0) {
-                            printf("Only positive number is alowed, please try again:");
+                            printf("Only positive number is allowed, please try again:");
                             while(getchar() !='\n');
                             continue;
                         }
