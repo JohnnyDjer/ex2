@@ -1,6 +1,6 @@
 /******************
-Name:
-ID:
+Name:Jonathan Djerassi	
+ID:303013098
 Assignment: ex2
 *******************/
 
