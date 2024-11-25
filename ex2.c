@@ -5,7 +5,6 @@ Assignment: ex2
 *******************/
 
 #include <stdio.h>
-
 int main() {
     int option;
     int numFromUser, smileNumber, cheerNumber, maxNumber;
@@ -25,9 +24,10 @@ int main() {
         printf("\t7. Exit\n");
 
         // Take user input for option
+        scanf("%*[^\n");
         if (scanf("%d", &option) != 1 || option < 1 || option > 7) {
             printf("This option is not available, please try again.\n");
-            while (getchar() != '\n'); // Clear input buffer
+
             continue;
         }
 
@@ -36,16 +36,18 @@ int main() {
                 char eyes, nose, mouth;
                 int size;
 
+
                 printf("Enter symbols for the eyes, nose, and mouth:\n");
+                scanf("%*[^\n");
                 scanf(" %c %c %c", &eyes, &nose, &mouth);
 
                 // Get face size
                 printf("Enter face size (odd and positive):\n");
                 while (1) {
-
+                    scanf("%*[^\n");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
                         printf("The face's size must be an odd and positive number, please try again:\n");
-                        while (getchar() != '\n'); // Clear input buffer
+
                         continue;
                     }
                     break;
@@ -89,7 +91,7 @@ int main() {
                     // Get a number from the user and ensure it's positive
                     printf("Enter a number:\n");
                     while(1) {
-
+                        scanf("%*[^\n");
                         scanf("%d", &numFromUser);
                         if(numFromUser <= 0 ) {
                             printf("Only positive number is allowed, please try again:\n");
@@ -143,7 +145,7 @@ int main() {
                     // Get number and check if generous (abundant)
                     printf("Enter a number:\n");
                     while(3){
-
+                        scanf("%*[^\n");
                     scanf("%d", &numFromUser);
                         if(numFromUser<=0) {
                             printf("Only positive number is allowed, please try again:\n");
@@ -170,7 +172,8 @@ int main() {
                     // Get number and check if prime and reverse also prime (Circle of Joy)
                     while(4){
                     printf("Enter a number:\n");
-                    scanf("%d", &numFromUser);
+                        scanf("%*[^\n");
+                        scanf("%d", &numFromUser);
                         if(numFromUser<=0) {
                             printf("Only positive number is allowed, please try again:\n");
                         }else {
@@ -263,10 +266,11 @@ int main() {
 while(6) {
 
     // Check for valid numbers
+    scanf("%*[^\n");
     if( scanf(" %d %d", &smileNumber, &cheerNumber) != 2 || smileNumber<=0 || cheerNumber<=0 || smileNumber == cheerNumber) {
         printf("Only 2 different positive numbers are allowed for the festival, please try again:\n");
 
-        while(getchar() !='\n');
+
         continue;
     }break;
 }
@@ -276,9 +280,10 @@ while(6) {
                     // Get maximum number for the festival
                     while(6) {
                         printf("Enter maximum number for the festival:\n");
+                        scanf("%*[^\n");
                         if(scanf("%d", &maxNumber)!= 1 || maxNumber<=0 || maxNumber<=0) {
                             printf("Only positive number is allowed, please try again:");
-                            while(getchar() !='\n');
+
                             continue;
                         }
                         break;
