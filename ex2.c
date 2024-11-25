@@ -31,57 +31,58 @@ int main() {
         }
 
         switch (option) {
-            case 1: {
+            case 1: { //Happy Face
                 char eyes, nose, mouth;
                 int size;
+ printf("Enter symbols for the eyes, nose, and mouth:\n");
+                // Read 3 symbols
+                if (scanf(" %c %c %c", &eyes, &nose, &mouth) != 3) {
+                    printf("Invalid input, please try again.\n");
+                    scanf("%*[^\n]");  // Clear the input buffer
+                    continue;
+                }
 
-
-                printf("Enter symbols for the eyes, nose, and mouth:\n");
-                scanf("%*[^\n]");
-                scanf(" %c %c %c", &eyes, &nose, &mouth);
-
-                // Get face size
                 printf("Enter face size:\n");
+                // Read the face size, validate it
                 while (1) {
-                    scanf("%*[^\n]");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
                         printf("The face's size must be an odd and positive number, please try again:\n");
-
-                        continue;
+                        scanf("%*[^\n]");  // Clear the input buffer
+                    } else {
+                        break;  // Valid size, exit the loop
                     }
-                    break;
                 }
 
-                // Calculate number of spaces
-                int spacesBetweenEyes = size - 2;
-                int spacesBeforeNose = size / 2;
-
-                // Print face structure
-                // 1. Print top row (eyes)
-                /* for (i = 0; i < spaces_before_nose; i++) {
-                     printf(" "); // Print top spaces
-                 }*/
-                printf("%c", eyes);
-                for (i = 0; i < spacesBetweenEyes; i++) {
-                    printf(" "); // Space between eyes
-                }
-                printf("%c\n", eyes);
-
-                // 2. Print nose row
-                for (i = 0; i < spacesBeforeNose; i++) {
-                    printf(" ");
-                }
-                printf("%c\n", nose);
-
-                // 3. Print mouth row
-
-                for (i = 0; i < spacesBeforeNose; i++) {
-                    printf("\\");
-                    for(j=0; j<spacesBetweenEyes; j++) {
-                        printf("%c", mouth);
+                // Print the face
+                for (int i = 0; i < size; i++) {
+                    if (i == size / 2) {  // Middle row (nose row)
+                        // Print nose with spaces before it
+                        for (int j = 0; j < (size - 1) / 2; j++) {
+                            printf(" ");
+                        }
+                        printf("%c\n", nose);
+                    } else if (i < size / 2) {  // Top half (eyes row)
+                        // Print eyes with spaces between them
+                        for (int j = 0; j < (size - 1) / 2 - i; j++) {
+                            printf(" ");
+                        }
+                        printf("%c", eyes);
+                        for (int j = 0; j < 2 * i + 1; j++) {
+                            printf(" ");
+                        }
+                        printf("%c\n", eyes);
+                    } else {  // Bottom half (mouth row)
+                        for (int j = 0; j < (size - 1) / 2; j++) {
+                            printf(" ");
+                        }
+                        printf("\\");
+                        for (int j = 0; j < 2 * (size - 1) - 1; j++) {
+                            printf("%c", mouth);
+                        }
+                        printf("/\n");
                     }
-                    printf("/\n");
-                    break;;
+                }
+                break;
                 }
                 continue;
 
@@ -286,4 +287,3 @@ int main() {
 
         return 0;
     }
-}
