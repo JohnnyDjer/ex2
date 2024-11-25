@@ -233,7 +233,7 @@ int main() {
                     continue;
                 }
 
-   case 6: {
+                case 6: {
                 printf("Enter a smile and cheer number:\n");
                 while (1) {
                     // Clear the buffer if any previous input is left
@@ -249,8 +249,9 @@ int main() {
                 }
 
                 // Get the maximum number for the festival
-                while (1) {
                     printf("Enter maximum number for the festival:\n");
+                    while (1) {
+
                     // Clear the buffer before reading the next input
                     scanf("%*[^\n]");
 
