@@ -7,7 +7,7 @@ Assignment: ex2
 #include <stdio.h>
 
 int main() {
-	int option;
+    int option;
     int numFromUser, smileNumber, cheerNumber, maxNumber;
     int   isPrime = 0;
     int    i, j;
@@ -31,14 +31,8 @@ int main() {
             continue;
         }
 
-        switch (option) {	// Case 1: Draw Happy Face with given symbols for eyes, nose and mouse
-	/* Example:
-	* n = 3:
-	* 0   0
-	*   o
-	* \___/
-	*/
-  case 1: {
+        switch (option) {
+            case 1: {
                 char eyes, nose, mouth;
                 int size;
 
@@ -89,14 +83,9 @@ int main() {
             break;;
                 }
                 continue;
-	// Case 2: determine whether the sum of all digits to the left of the middle digit(s)
-	// and the sum of all digits to the right of the middle digit(s) are equal
-	/* Examples:
-	Balanced: 1533, 450810, 99
-	Not blanced: 1552, 34
-	Please notice: the number has to be bigger than 0.
-	*/
-	     case 2: {
+
+
+                case 2: {
                     // Get a number from the user and ensure it's positive
                     printf("Enter a number:\n");
                     while(1) {
@@ -149,13 +138,8 @@ int main() {
 
                     continue;
                 }
-	// Case 3: determine whether the sum of the proper divisors (od an integer) is greater than the number itself
-	/* Examples:
-	Abudant: 12, 20, 24
-	Not Abudant: 3, 7, 10
-	Please notice: the number has to be bigger than 0.
-	*/
-	 case 3: {
+
+                case 3: {
                     // Get number and check if generous (abundant)
                     printf("Enter a number:\n");
                     while(3){
@@ -181,12 +165,8 @@ int main() {
                     }
                     continue;
                 }
-	// Case 4: determine wether a number is a prime.
-	/* Examples:
-	This one brings joy: 3, 5, 11
-	This one does not bring joy: 15, 8, 99
-	Please notice: the number has to be bigger than 0.
-	*/case 4: {
+
+                case 4: {
                     // Get number and check if prime and reverse also prime (Circle of Joy)
                     while(4){
                     printf("Enter a number:\n");
@@ -232,14 +212,7 @@ int main() {
                     continue;
                 }
 
-	// Happy numbers: Print all the happy numbers between 1 to the given number.
-	// Happy number is a number which eventually reaches 1 when replaced by the sum of the square of each digit
-	/* Examples:
-	Happy :) : 7, 10
-	Not Happy :( : 5, 9
-	Please notice: the number has to be bigger than 0.
-	*/
-	     case 5: {
+                case 5: {
                     // Get maximum number and print happy numbers up to it
                     printf("Enter a number:\n");
                     while(1) {
@@ -282,20 +255,13 @@ int main() {
                     continue;
                 }
 
-	// Festival of Laughter: Prints all the numbers between 1 the given number:
-	// and replace with "Smile!" every number that divided by the given smile number
-	// and replace with "Cheer!" every number that divided by the given cheer number
-	// and replace with "Festival!" every number that divided by both of them
-	/* Example:
-	6, smile: 2, cheer: 3 : 1, Smile!, Cheer!, Smile!, 5, Festival!
-	*/
-		      case 6:{
+                case 6:{
 
 
                     // Get smile number, cheer number, and max number for festival
                     printf("Enter a smile and cheer number:\n");
 while(6) {
-    
+
     // Check for valid numbers
     if( scanf(" %d %d", &smileNumber, &cheerNumber) != 2 || smileNumber<=0 || cheerNumber<=0 || smileNumber == cheerNumber) {
         printf("Only 2 different positive numbers are allowed for the festival, please try again:\n");
@@ -334,40 +300,12 @@ while(6) {
                     continue;
                 }
 
-
-
-                    // Get maximum number for the festival
-                    while(6) {
-                        printf("Enter maximum number for the festival:\n");
-                        if(scanf("%d", &maxNumber)!= 1 || maxNumber<=0 || maxNumber<=0) {
-                            printf("Only positive number is allowed, please try again:");
-                            while (scanf("%c")!=EOF){};
-                            continue;
-                        }
-                        break;
-                    }
-
-                    // Loop through and print festival numbers
-                    for (i = 1; i <= maxNumber; i++) {
-                        if (i % smileNumber == 0 && i % cheerNumber == 0) {
-                            printf("Festival!\n");
-                        } else if (i % smileNumber == 0) {
-                            printf("Smile!\n");
-                        } else if (i % cheerNumber == 0) {
-                            printf("Cheer!\n");
-                        } else {
-                            printf("%d \n", i);
-                        }
-                    }
-                    printf("\n");
-                    continue;
-                }
-
                 case 7:
                     printf("Thank you for your journey through Numeria!\n");
                 return 0;
             }
         }
-	
-}
+
+
+    }
 }
