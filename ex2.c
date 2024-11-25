@@ -28,7 +28,7 @@ int main() {
         // Take user input for option
         if (scanf("%d", &option) != 1 || option < 1 || option > 7) {
             printf("This option is not available, please try again.\n");
-            while (getchar() != '\n'); // Clear input buffer
+            while (scanf("%c")!=EOF){}; // Clear input buffer
             continue;
         }
 
@@ -52,7 +52,7 @@ int main() {
                     printf("Enter face size (odd and positive):\n");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
                         printf("The face's size must be an odd and positive number, please try again:\n");
-                        while (getchar() != '\n'); // Clear input buffer
+                        while (scanf("%c")!=EOF){}; // Clear input buffer
                         continue;
                     }
                     break;
@@ -304,7 +304,7 @@ while(6) {
     if( scanf(" %d %d", &smileNumber, &cheerNumber) != 2 || smileNumber<=0 || cheerNumber<=0 || smileNumber == cheerNumber) {
         printf("Only 2 different positive numbers are allowed for the festival, please try again:\n");
 
-        while(getchar() !='\n');
+        while (scanf("%c")!=EOF){};
         continue;
     }break;
 }
@@ -316,7 +316,7 @@ while(6) {
                         printf("Enter maximum number for the festival:\n");
                         if(scanf("%d", &maxNumber)!= 1 || maxNumber<=0 || maxNumber<=0) {
                             printf("Only positive number is allowed, please try again:");
-                            while(getchar() !='\n');
+                            while (scanf("%c")!=EOF){};
                             continue;
                         }
                         break;
