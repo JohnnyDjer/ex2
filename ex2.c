@@ -6,8 +6,8 @@ Assignment: ex2
 
 #include <stdio.h>
 
-
-int option;
+int main() {
+	int option;
     int numFromUser, smileNumber, cheerNumber, maxNumber;
     int   isPrime = 0;
     int    i, j;
