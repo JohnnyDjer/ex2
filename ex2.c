@@ -44,7 +44,7 @@ int main() {
                 // Get face size
                 printf("Enter face size (odd and positive):\n");
                 while (1) {
-                    scanf("%*[^\n");
+                    scanf("%*[^\n]");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
                         printf("The face's size must be an odd and positive number, please try again:\n");
 
