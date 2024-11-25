@@ -233,53 +233,49 @@ int main() {
                     continue;
                 }
 
-                case 6: {
-    printf("Enter a smile and cheer number:\n");
-    
-    while (1) {
-        // Clear input buffer
-        scanf("%*[^\n]"); // Discard any extra input
+   case 6: {
+                printf("Enter a smile and cheer number:\n");
+                while (1) {
+                    // Clear the buffer if any previous input is left
+                    scanf("%*[^\n]");
 
-        // Read two integers for smile and cheer
-        if (scanf(" %d %d", &smileNumber, &cheerNumber) != 2 || smileNumber <= 0 || cheerNumber <= 0 || smileNumber == cheerNumber) {
-            // Check if input is invalid:
-            // 1. Not two integers
-            // 2. Non-positive integers
-            // 3. Both numbers are the same
-            printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:\n");
-        } else {
-            break;  // Valid input, exit loop
-        }
-    }
+                    // Read two integers for smile and cheer
+                    if (scanf("%d %d", &smileNumber, &cheerNumber) != 2 || smileNumber <= 0 || cheerNumber <= 0 || smileNumber == cheerNumber) {
+                        // Ensure valid input: two positive integers, and they must be different
+                        printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:\n");
+                    } else {
+                        break;  // Valid input, break out of the loop
+                    }
+                }
 
-    // Input for maximum number in the festival
-    while (1) {
-        printf("Enter maximum number for the festival:\n");
-        scanf("%*[^\n]"); // Discard any extra input
+                // Get the maximum number for the festival
+                while (1) {
+                    printf("Enter maximum number for the festival:\n");
+                    // Clear the buffer before reading the next input
+                    scanf("%*[^\n]");
 
-        // Check if the input is a positive integer
-        if (scanf("%d", &maxNumber) != 1 || maxNumber <= 0) {
-            printf("Only positive maximum number is allowed, please try again:\n");
-        } else {
-            break; // Valid input, exit loop
-        }
-    }
+                    if (scanf("%d", &maxNumber) != 1 || maxNumber <= 0) {
+                        printf("Only positive maximum number is allowed, please try again:\n");
+                    } else {
+                        break;  // Valid input, break out of the loop
+                    }
+                }
 
-    // Loop to print "Festival", "Smile", or "Cheer"
-    for (int i = 1; i <= maxNumber; i++) {
-        if (i % smileNumber == 0 && i % cheerNumber == 0) {
-            printf("Festival!\n");
-        } else if (i % smileNumber == 0) {
-            printf("Smile!\n");
-        } else if (i % cheerNumber == 0) {
-            printf("Cheer!\n");
-        } else {
-            printf("%d \n", i);  // Print the number if neither condition matches
-        }
-    }
+                // Print the festival results
+                for (i = 1; i <= maxNumber; i++) {
+                    if (i % smileNumber == 0 && i % cheerNumber == 0) {
+                        printf("Festival!\n");
+                    } else if (i % smileNumber == 0) {
+                        printf("Smile!\n");
+                    } else if (i % cheerNumber == 0) {
+                        printf("Cheer!\n");
+                    } else {
+                        printf("%d \n", i);  // If no conditions met, print the number
+                    }
+                }
 
-    continue; // Continue to next option after case 6 finishes
-}
+                continue; // Continue to the next option
+            }
 
                 case 7:
                     printf("Thank you for your journey through Numeria!\n");
