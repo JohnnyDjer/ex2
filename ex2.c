@@ -28,6 +28,7 @@ int main() {
         if (scanf("%d", &option) != 1 || option < 1 || option > 7) {
             printf("This option is not available, please try again.\n");
             scanf("%*[^\n]");  // Clear the buffer
+            scanf("%*c");
             continue;
         }
 
