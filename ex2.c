@@ -23,10 +23,10 @@ int main() {
         printf("\t7. Exit\n");
 
         // Take user input for option
-        scanf("%*[^\n]");
+       
         if (scanf("%d", &option) != 1 || option < 1 || option > 7) {
             printf("This option is not available, please try again.\n");
-
+             scanf("%*[^\n]");
             continue;
         }
 
