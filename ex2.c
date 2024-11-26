@@ -25,7 +25,7 @@ int main() {
         printf("\t7. Exit\n");
 
         // Take user input for option
-        if (scanf("%d", &option) != 1 || option < 1 || option > 7) {
+        if (scanf("%d",&option) != 1 || option < 1 || option > 7) {
             printf("This option is not available, please try again.\n");
             scanf("%*[^\n]");  // Clear the buffer
             scanf("%*c");
@@ -39,7 +39,7 @@ int main() {
                 int size;
                 printf("Enter symbols for the eyes, nose, and mouth:\n");
                 scanf("%*[^\n]");  // Clear any unwanted input
-                scanf(" %c %c %c", &eyes, &nose, &mouth);  // Notice the space before %c
+                scanf("%c %c %c", &eyes, &nose, &mouth);  // Notice the space before %c
 
                 // Get face size
                 printf("Enter face size:\n");
