@@ -44,6 +44,7 @@ int main() {
                 printf("Enter face size:\n");
                 while (1) {
                     scanf("%*[^\n]");
+                    scanf("%*c");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
                         printf("The face's size must be an odd and positive number, please try again:\n");
 
@@ -89,6 +90,7 @@ int main() {
                     printf("Enter a number:\n");
                     while (1) {
                         scanf("%*[^\n]"); // Discard any extra input
+                        scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
                             printf("Only positive number is allowed, please try again:\n");
                             continue;
@@ -134,6 +136,7 @@ int main() {
                     printf("Enter a number:\n");
                     while (1) {
                         scanf("%*[^\n]"); // Discard any extra input
+                        scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
                             printf("Only positive number is allowed, please try again:\n");
                             continue;
@@ -160,6 +163,7 @@ int main() {
                     printf("Enter a number:\n");
                     while (1) {
                         scanf("%*[^\n]"); // Discard any extra input
+                        scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
                             printf("Only positive number is allowed, please try again:\n");
                             continue;
@@ -202,6 +206,7 @@ int main() {
                     printf("Enter a number:\n");
                     while (1) {
                         scanf("%*[^\n]"); // Discard any extra input
+                        scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
                             printf("Only positive number is allowed, please try again:\n");
                             continue;
@@ -238,7 +243,7 @@ int main() {
                     while (1) {
                         // Clear the buffer if any previous input is left
                         scanf("%*[^\n]");
-
+                        scanf("%*c");
                         // Read two integers for smile and cheer
                         if (scanf("%d %d", &smileNumber, &cheerNumber) != 2 || smileNumber <= 0 || cheerNumber <= 0 || smileNumber == cheerNumber) {
                             // Ensure valid input: two positive integers, and they must be different
@@ -254,7 +259,7 @@ int main() {
 
                         // Clear the buffer before reading the next input
                         scanf("%*[^\n]");
-
+                        scanf("%*c");
                         if (scanf("%d", &maxNumber) != 1 || maxNumber <= 0) {
                             printf("Only positive maximum number is allowed, please try again:\n");
                         } else {
@@ -289,3 +294,5 @@ int main() {
         }
     }
 }
+
+
