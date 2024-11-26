@@ -37,13 +37,13 @@ int main() {
                 char eyes, nose, mouth;
                 int size;
                 printf("Enter symbols for the eyes, nose, and mouth:\n");
-                scanf("%*[^\n");
-                scanf("%c %c %c", &eyes, &nose, &mouth);
+                scanf("%*[^\n]");
+                scanf(" %c %c %c", &eyes, &nose, &mouth);
 
                 // Get face size
-                printf("Enter face size (odd and positive):\n");
+                printf("Enter face size:\n");
                 while (1) {
-                    scanf("%*[^\n");
+                    scanf("%*[^\n]");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
                         printf("The face's size must be an odd and positive number, please try again:\n");
 
