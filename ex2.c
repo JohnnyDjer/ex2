@@ -5,6 +5,8 @@ Assignment: ex2
 *******************/
 
 #include <stdio.h>
+
+#include <stdio.h>
 int main() {
     int option;
     int numFromUser, smileNumber, cheerNumber, maxNumber;
@@ -41,13 +43,13 @@ int main() {
                 // Get face size
                 printf("Enter face size (odd and positive):\n");
                 while (1) {
-                    scanf("%*[^\n]");
+                   // scanf("%*[^\n]");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
                         printf("The face's size must be an odd and positive number, please try again:\n");
 
                         continue;
                     }
-                    break;
+                break;
                 }
 
                 // Calculate number of spaces
@@ -79,7 +81,7 @@ int main() {
                         printf("%c", mouth);
                     }
                     printf("/\n");
-                    break;;
+                    break;
                 }
                 continue;
 
