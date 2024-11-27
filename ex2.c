@@ -7,13 +7,16 @@ Assignment: ex2
 #include <stdio.h>
 
 
+#define INPUT_VALIDATION 1
+#include <stdio.h>
+
 int main() {
     int option;
     int numFromUser, smileNumber, cheerNumber, maxNumber;
     int isPrime = 0;
     int i, j;
 
-    while (1) {
+    while (INPUT_VALIDATION) {
         // Display menu
 
         printf("Choose an option:\n");
@@ -36,8 +39,8 @@ int main() {
         }
 
         switch (option) {
-
-            case 1: { //Happy Face
+            //Happy Face
+            case 1: {
                 char eyes, nose, mouth;
                 int size;
                 printf("Enter symbols for the eyes, nose, and mouth:\n");
@@ -46,7 +49,7 @@ int main() {
 
                 // Get face size
                 printf("Enter face size:\n");
-                while (1) {
+                while (INPUT_VALIDATION) {
                     scanf("%*[^\n]");
                     scanf("%*c");
                     if (scanf("%d", &size) != 1 || size <= 0 || size % 2 == 0) {
@@ -62,9 +65,9 @@ int main() {
                 int spacesBeforeNose = size / 2;
 
                 // Print face structure
-               
+
                 // 1. Print top row (eyes)
-               
+
                 printf("%c", eyes);
                 for (i = 0; i < spacesBetweenEyes; i++) {
                     printf(" "); // Space between eyes
@@ -91,7 +94,7 @@ int main() {
 
                 case 2: {
                     printf("Enter a number:\n");
-                    while (1) {
+                    while (INPUT_VALIDATION) {
                         scanf("%*[^\n]"); // Discard any extra input
                         scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
@@ -137,7 +140,7 @@ int main() {
 
                 case 3: {
                     printf("Enter a number:\n");
-                    while (1) {
+                    while (INPUT_VALIDATION) {
                         scanf("%*[^\n]"); // Discard any extra input
                         scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
@@ -164,7 +167,7 @@ int main() {
 
                 case 4: {
                     printf("Enter a number:\n");
-                    while (1) {
+                    while (INPUT_VALIDATION) {
                         scanf("%*[^\n]"); // Discard any extra input
                         scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
@@ -207,7 +210,7 @@ int main() {
 
                 case 5: {
                     printf("Enter a number:\n");
-                    while (1) {
+                    while (INPUT_VALIDATION) {
                         scanf("%*[^\n]"); // Discard any extra input
                         scanf("%*c");
                         if (scanf("%d", &numFromUser) != 1 || numFromUser <= 0) {
@@ -244,7 +247,7 @@ int main() {
                 case 6: {
                     printf("Enter a smile and cheer number:\n");
 
-                    while (1) {
+                    while (INPUT_VALIDATION) {
                         // Clear the buffer if any previous input is left
                         scanf("%*[^\n]");
                         scanf("%*c");
@@ -260,7 +263,7 @@ int main() {
 
                     // Get the maximum number for the festival
                     printf("Enter maximum number for the festival:\n");
-                    while (1) {
+                    while (INPUT_VALIDATION) {
 
                         // Clear the buffer before reading the next input
                         scanf("%*[^\n]");
