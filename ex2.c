@@ -1,6 +1,6 @@
 /******************
 Name:Jonathan Djerassi	
-ID:303013098
+ID:
 Assignment: ex2
 *******************/
 
