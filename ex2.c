@@ -62,10 +62,9 @@ int main() {
                 int spacesBeforeNose = size / 2;
 
                 // Print face structure
+               
                 // 1. Print top row (eyes)
-                /* for (i = 0; i < spaces_before_nose; i++) {
-                     printf(" "); // Print top spaces
-                 }*/
+               
                 printf("%c", eyes);
                 for (i = 0; i < spacesBetweenEyes; i++) {
                     printf(" "); // Space between eyes
@@ -82,7 +81,7 @@ int main() {
 
                 for (i = 0; i < spacesBeforeNose; i++) {
                     printf("\\");
-                    for(j=0; j<spacesBetweenEyes; j++) {
+                    for(j=0; j<spacesBetweenEyes+2; j++) {
                         printf("%c", mouth);
                     }
                     printf("/\n");
