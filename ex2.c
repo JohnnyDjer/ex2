@@ -15,6 +15,7 @@ int main() {
 
     while (1) {
         // Display menu
+
         printf("Choose an option:\n");
         printf("\t1. Happy Face\n");
         printf("\t2. Balanced Number\n");
@@ -23,6 +24,7 @@ int main() {
         printf("\t5. Happy Numbers\n");
         printf("\t6. Festival Of Laughter\n");
         printf("\t7. Exit\n");
+
 
         // Take user input for option
 
@@ -34,11 +36,12 @@ int main() {
         }
 
         switch (option) {
+
             case 1: { //Happy Face
                 char eyes, nose, mouth;
                 int size;
                 printf("Enter symbols for the eyes, nose, and mouth:\n");
-                scanf("%*[^\n]");
+
                 scanf(" %c %c %c", &eyes, &nose, &mouth);
 
                 // Get face size
@@ -241,12 +244,14 @@ int main() {
 
                 case 6: {
                     printf("Enter a smile and cheer number:\n");
+
                     while (1) {
                         // Clear the buffer if any previous input is left
                         scanf("%*[^\n]");
                         scanf("%*c");
                         // Read two integers for smile and cheer
-                        if (scanf("%d %d", &smileNumber, &cheerNumber) != 2 || smileNumber <= 0 || cheerNumber <= 0 || smileNumber == cheerNumber) {
+
+                        if (scanf(" smile : %d, cheer : %d", &smileNumber, &cheerNumber) != 2 || smileNumber <= 0 || cheerNumber <= 0 || smileNumber == cheerNumber) {
                             // Ensure valid input: two positive integers, and they must be different
                             printf("Only 2 different positive numbers in the given format are allowed for the festival, please try again:\n");
                         } else {
